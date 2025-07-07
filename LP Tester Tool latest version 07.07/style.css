@@ -1,0 +1,204 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  overflow-x: hidden;
+  background-color: #2C2C2C;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #121212;
+  
+  height: 300px;
+  z-index: 99;
+  /* width: 89.5vw; */
+}
+
+.select-brand {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.label {
+    color: #FFF;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+.betmgm-icon img, .borgata-icon img {
+    height: 30px;
+    padding: 10px;
+}
+
+.wof-icon img, .pc-icon img {
+    height: 15px;
+    padding: 10px;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  /* width: 89.5vw; */
+  width: 100%;
+  padding: 20px 0 10px 0;
+  border-top: 1px solid white;
+}
+
+.upload-container label {
+    font-size: 1rem;
+    color: #FFF;
+    margin: 5px;
+}
+
+select, input[type="file"], button {
+  padding: 5px;
+  margin-top: 5px;
+  color: #FFF;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+.file-upload-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+ input[type="file"] {
+  margin: 0 auto;
+  text-align: center;
+ }
+
+
+#heroPosition {
+  color: #000;
+  margin-left: 15px;
+}
+
+button {
+  background-color: #2C2C2C;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100px;
+}
+
+button:hover {
+  background-color: #374151;
+}
+
+button:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.preview-container {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0 auto;
+  height: 720px;
+  margin-left: 0;
+  background-color: #2C2C2C;
+}
+
+/* .preview-desktop {
+  display: none; 
+} */
+
+
+
+.hero-image {
+  position: absolute;
+  max-width: 50%;
+  max-height: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.preview-desktop button {
+  left: 44%;
+}
+
+
+/* .preview-desktop .button-primary-betmgm,
+.preview-desktop .button-primary-borgata,
+.preview-desktop .button-primary-wof,
+.preview-desktop .button-primary-pc {
+  display: none;
+} */
+
+
+.left { left: 0; }
+.center { left: 50%; transform: translate(-50%, -50%); }
+.right { right: 0; }
+
+.hero-image img {
+  width: 85%;
+  height: auto;
+}
+
+.hero-position label {
+  color: #FFF;
+}
+
+.hero-position select {
+  color: #000;
+}
+
+/* SOCIALS */
+
+
+.social-content {  
+  padding-bottom: 10px;
+}
+
+.social-content img {
+  width: 70%;
+}
+
+.footer-social-logo {
+  max-width: 55%;
+}
+
+.fb {
+  margin-left: 9px;
+  margin-top: 9px;
+}
+
+.ig {
+  margin-left: 9px;
+  margin-top: 9px;
+}
+
+.twitter {
+  margin-left: 9px;
+  margin-top: 9px;
+
+}

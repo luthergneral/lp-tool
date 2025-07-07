@@ -1,0 +1,40 @@
+CASINO
+
+Borgata
+BC PA - https://scmedia.itsfogo.com/$-$/40d6905a04ca49f29649140865f543e2.svg
+BC NJ - https://scmedia.itsfogo.com/$-$/8aa87cace9824f0e895d41fa8accbc35.svg
+
+BetMGM
+MC PA - https://scmedia.itsfogo.com/$-$/43443280626141e0b569cddead5508ba.svg
+MC WV - https://scmedia.wv.betmgm.com/$-$/c479aa437032433382b5d880d0969402.svg
+	https://scmedia.wv.betmgm.com/$-$/6f36c4e9de894e70912bb1b370e3725c.png
+MC MI - https://scmedia.itsfogo.com/$-$/57f303deabd64a6ea7dfbcf6e60683fd.svg
+MC NJ - https://scmedia.nj.betmgm.com/$-$/1bc98331c0cf42498a92cf74129978ab.svg
+MC ON - https://scmedia.dc.betmgm.com/$-$/6e45ae90f456464bb5b1fb63770296bc.png
+
+Wheel of Fortune
+WOF NJ - https://scmedia.itsfogo.com/$-$/0562de9d17fb436cbad1a27a4b3942be.svg
+WOF ON - No Logo / Left Side Buttons
+
+Party Casino
+PC - https://scmedia.itsfogo.com/$-$/dfc83d8300fb4c0f9302c4e52c31d0fd.png
+
+POKER
+
+Borgata
+BC PA - https://scmedia.itsfogo.com/$-$/53e16a5e3a324af58796940443220c92.svg
+BC NJ - https://scmedia.borgataonline.com/$-$/d0abad2cb37d449bbeaab367f2e475f5.svg
+
+BetMGM
+MC PA - https://scmedia.itsfogo.com/$-$/43443280626141e0b569cddead5508ba.svg
+MC MI - https://scmedia.itsfogo.com/$-$/57f303deabd64a6ea7dfbcf6e60683fd.svg
+MC NJ - https://scmedia.nj.betmgm.com/$-$/1bc98331c0cf42498a92cf74129978ab.svg
+MC ON - No Logo / Left Side Buttons
+
+SPORTS
+
+BetMGM
+MC - https://scmedia.nj.betmgm.com/$-$/1bc98331c0cf42498a92cf74129978ab.svg
+
+Borgata
+BC - https://scmedia.borgataonline.com/$-$/c233b58356a64687aa0484e4e2f184e1.svg

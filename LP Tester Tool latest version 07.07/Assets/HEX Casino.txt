@@ -1,0 +1,16 @@
+HEX Casino
+
+BC - d21c5d
+MC - d12631
+WOF - efe700
+PC - f00a47
+
+HEX Poker
+
+BC - f47523
+MC - 00a35b
+
+HEX Sports
+
+MC - bda871
+BC - 5ac8e8

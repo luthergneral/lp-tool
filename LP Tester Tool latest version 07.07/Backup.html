@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page Visual Preview</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+
+    select, input[type="file"], button {
+      padding: 5px;
+      margin-top: 5px;
+    }
+
+    .preview-container {
+      border: 2px solid #ccc;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .hero-image {
+      position: absolute;
+      max-width: 50%;
+      max-height: 80%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .left { left: 5%; }
+    .center { left: 50%; transform: translate(-50%, -50%); }
+    .right { right: 5%; }
+
+    .desktop {
+      width: 1280px;
+      height: 720px;
+    }
+
+    .mobile {
+      width: 360px;
+      height: 640px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <h1>Landing Page Visual Preview Tool</h1>
+  <div class="controls">
+    <label>
+      Site/State:
+      <select id="siteSelect">
+        <option value="Site A">Site A</option>
+        <option value="Site B">Site B</option>
+        <option value="Site C">Site C</option>
+      </select>
+    </label>
+
+    <label>
+      View:
+      <select id="viewSelect">
+        <option value="desktop">Desktop</option>
+        <option value="mobile">Mobile</option>
+      </select>
+    </label>
+
+    <label>
+      Hero Position:
+      <select id="heroPosition">
+        <option value="left">Left</option>
+        <option value="center">Center</option>
+        <option value="right">Right</option>
+      </select>
+    </label>
+
+    <label>
+      Upload Background:
+      <input type="file" id="bgUpload" accept="image/*">
+    </label>
+
+    <label>
+      Upload Hero PNG:
+      <input type="file" id="heroUpload" accept="image/png">
+    </label>
+
+    <button onclick="resetView()">Reset</button>
+  </div>
+
+  <div id="preview" class="preview-container desktop">
+    <div id="hero" class="hero-image left"><img id="heroImg" src="" alt=""></div>
+  </div>
+
+  <script>
+    const preview = document.getElementById('preview');
+    const heroDiv = document.getElementById('hero');
+    const heroImg = document.getElementById('heroImg');
+
+    document.getElementById('viewSelect').addEventListener('change', function () {
+      preview.className = `preview-container ${this.value}`;
+    });
+
+    document.getElementById('heroPosition').addEventListener('change', function () {
+      heroDiv.className = `hero-image ${this.value}`;
+    });
+
+    document.getElementById('bgUpload').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (file) {
+        const url = URL.createObjectURL(file);
+        preview.style.backgroundImage = `url('${url}')`;
+      }
+    });
+
+    document.getElementById('heroUpload').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (file) {
+        const url = URL.createObjectURL(file);
+        heroImg.src = url;
+      }
+    });
+
+    function resetView() {
+      preview.style.backgroundImage = '';
+      heroImg.src = '';
+    }
+  </script>
+</body>
+</html>

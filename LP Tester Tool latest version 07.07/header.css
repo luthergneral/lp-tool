@@ -1,0 +1,108 @@
+.header-mobile {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+.header-betmgm {
+    background-color: #121212;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-borgata {
+    background-color: #292a2e;
+    height: 50px;
+    display: flex;
+    display: none;
+    justify-content: space-between;
+}
+
+.header-wof {
+    background-color: #121212;
+    height: 50px;
+    display: flex;
+    display: none;
+    justify-content: space-between;
+}
+
+.header-pc {
+    background-color: #211551;
+    height: 50px;
+    display: flex;
+    display: none;
+    justify-content: space-between;
+}
+
+.header-betmgm img, .header-borgata img, .header-wof img, .header-pc img {
+    height: 30px;
+    padding: 10px;
+}
+
+.betmgm-icon, .borgata-icon, .wof-icon, .pc-icon {
+    cursor: pointer;
+}
+
+.betmgm-button-container, .borgata-button-container, .wof-button-container, .pc-button-container {
+    padding: 6px;
+}
+
+.button-primary-betmgm {
+    background: #d12631;
+    color: #FFF;
+    border: 1px solid #d12631;
+}
+
+.button-secondary-betmgm {
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+.button-primary-borgata {
+    background: #d21c5d;
+    color: #fff;
+    border: 1px solid #d21c5d;
+}
+
+.button-secondary-borgata {
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+.button-primary-wof {
+    background: #efe700;
+    color: #000;
+    border: 1px solid #efe700;
+}
+
+.button-secondary-wof {
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+.button-primary-pc {
+    background: #f00a47;
+    color: #fff;
+    border: 1px solid #f00a47;
+}
+
+.button-secondary-pc {
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+.button {
+    font-family: "Roboto Condensed", sans-serif;
+    border-radius: 3px;
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 400;
+    overflow: hidden;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+}
+
+
