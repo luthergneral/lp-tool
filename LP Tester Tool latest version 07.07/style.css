@@ -14,22 +14,19 @@ body {
   
   height: 300px;
   z-index: 99;
-  /* width: 89.5vw; */
 }
 
 .select-brand {
     text-align: center;
-    padding-bottom: 10px;
+    margin-right: 10px;
 }
 
-.label {
-    color: #FFF;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    padding-top: 10px;
+.product-container {
+  text-align: center;
+  margin-right: 10px;
 }
 
-.betmgm-icon img, .borgata-icon img {
+.betmgm-icon img, .borgata-icon img, .pp-icon img {
     height: 30px;
     padding: 10px;
 }
@@ -40,28 +37,13 @@ body {
 }
 
 .upload-container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 5px;
-  /* width: 89.5vw; */
-  width: 100%;
-  padding: 20px 0 10px 0;
-  border-top: 1px solid white;
 }
 
 .upload-container label {
-    font-size: 1rem;
+    font-size: .7rem;
     color: #FFF;
     margin: 5px;
-}
-
-select, input[type="file"], button {
-  padding: 5px;
-  margin-top: 5px;
-  color: #FFF;
-  margin-right: 10px;
-  padding-left: 10px;
 }
 
 .file-upload-wrapper {
@@ -75,22 +57,16 @@ select, input[type="file"], button {
   text-align: center;
  }
 
-
-#heroPosition {
-  color: #000;
-  margin-left: 15px;
-}
-
 button {
-  background-color: #2C2C2C;
+  background-color: #727272;
   border: 1px solid transparent;
-  border-radius: .75rem;
+  border-radius: 10px;
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
   flex: 0 0 auto;
   font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.5rem;
   padding: 0.2rem;
   text-align: center;
@@ -120,15 +96,10 @@ button:focus {
   background-position: center;
   position: relative;
   margin: 0 auto;
-  height: 720px;
+  height: 800px;
   margin-left: 0;
   background-color: #2C2C2C;
 }
-
-/* .preview-desktop {
-  display: none; 
-} */
-
 
 
 .hero-image {
@@ -143,21 +114,20 @@ button:focus {
 }
 
 .preview-desktop button {
-  left: 44%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-
-/* .preview-desktop .button-primary-betmgm,
-.preview-desktop .button-primary-borgata,
-.preview-desktop .button-primary-wof,
-.preview-desktop .button-primary-pc {
-  display: none;
-} */
-
-
-.left { left: 0; }
-.center { left: 50%; transform: translate(-50%, -50%); }
-.right { right: 0; }
+.left { 
+  left: 0; 
+}
+.center { 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+.right { 
+  right: 0; 
+}
 
 .hero-image img {
   width: 85%;
@@ -173,8 +143,6 @@ button:focus {
 }
 
 /* SOCIALS */
-
-
 .social-content {  
   padding-bottom: 10px;
 }

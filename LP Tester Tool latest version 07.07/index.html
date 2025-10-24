@@ -12,7 +12,118 @@
 </head>
 
 <body>
-  <div class="header-mobile">
+  <!-- HEADER -->
+  <div class="setting-container" id="menu">
+
+    <!-- SELECTIONS -->
+    <div class="dropdown-container">
+      <div class="dropdown-top">
+        <div class="label"><strong>SELECTIONS</strong></div>
+      </div>
+      <div class="dropdown-bottom">
+        <div class="select-brand">
+          <div class="label">Brands</div>
+          <select id="brand-select" style="color: black;">
+            <option value="betmgm">BetMGM</option>
+            <option value="borgata">Borgata</option>
+            <option value="wof">Wheel Of Fortune</option>
+            <option value="pc">Party Casino</option>
+            <option value="pp">Party Poker</option>
+          </select>
+        </div>
+        <div class="product-container">
+          <div class="label">Select Product</div>
+          <select id="productType" style="color: black;">
+            <option value="casino">Casino</option>
+            <option value="poker">Poker</option>
+            <option value="sports">Sports</option>
+          </select>
+        </div>
+        <div class="state-container">
+          <div class="state-selector">
+            <div class="label">Select State</div>
+            <select id="stateSelect" style="color: black;"></select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPLOADS -->
+    <div class="upload-container">
+      <div class="upload-top">
+        <div class="label"><strong>ASSETS</strong></div>
+      </div>
+      <div class="upload-bottom">
+        <div class="acq-desktop">
+          <label>ACQ Landing Page 2048x800</label>
+        <div class="file-upload-d">
+          <input type="file" id="bgUpload" accept="image/*">
+        </div>
+        </div>
+        <div class="acq-mobile">
+          <label>ACQ LP Mobile 1080x1080</label>
+          <div class="file-upload-m">
+            <input type="file" id="mobileUpload" accept="image/*">
+          </div>
+        </div>
+        <div class="acq-mobile-w">
+          <label>ACQ LP Mobile PNG 1080x(H)</label>
+          <div class="file-upload-png">
+            <input type="file" id="heroUpload" accept="image/png">
+          </div>
+        </div>
+      </div>
+      <div class="reset-button">
+        <button onclick="resetView()">Reset</button>
+      </div>
+    </div>
+
+    <!-- ADJUSTMENTS -->
+    <div class="adjustment-container">
+      <div class="adjustment-top">
+        <div class="label"><strong>ADJUSTMENTS</strong></div>
+      </div>
+      <div class="adjustment-bottom">
+        <div class="hero-size-controls">
+          <label for="heroWidth">Hero Image Width (%):</label>
+          <input type="number" id="heroWidth" min="1" max="100" value="85">
+        </div>
+        <div class="img-position-container">
+          <label>PNG Position</label>
+              <select id="heroPosition" style="color: black;">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+              </select>
+        </div>
+      </div>
+      <div class="btn-apply">
+        <button onclick="adjustHeroImage()">Apply</button>
+      </div>
+    </div>
+    
+    <!-- MOBILE VIEW -->
+    <div class="mobile-view-container">
+      <div class="mobile-view">
+        <div class="switch-box">
+          <label class="label"><strong>MOBILE VIEW</strong></label>
+          <label class="switch">
+          <input type="checkbox" id="checkBox">
+          <span class="slider round"></span>
+          </label>
+      </div>
+      </div>
+
+        <!-- <div class="hamburger" onclick="toggleMenu()" style="display: none;">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div> -->
+    </div>
+    
+  </div>
+  
+    <div class="header-mobile">
     <div class="header-betmgm">
       <div class="header-logo">
         <img src="https://scmedia.itsfogo.com/$-$/a81dc586a10a4528b06f33ec41627056.svg" alt="BetMGM" class="brand-logo"
@@ -21,12 +132,6 @@
       <div class="betmgm-button-container">
         <a class="button button-secondary-betmgm">Log In</a>
         <a class="button button-primary-betmgm" id="btnColorMC">Sign Up</a>
-        <!-- Hamburger Icon -->
-        <div class="hamburger" onclick="toggleMenu()">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
       </div>
     </div>
 
@@ -38,47 +143,46 @@
       <div class="borgata-button-container">
         <a class="button button-secondary-borgata">LOG IN</a>
         <a class="button button-primary-borgata" id="btnColorBC">REGISTER</a>
-        <div class="hamburger" onclick="toggleMenu()">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
       </div>
     </div>
 
     <div class="header-wof">
       <div class="header-logo">
-        <img src="https://scmedia.wheeloffortunecasino.com/$-$/0562de9d17fb436cbad1a27a4b3942be.svg" alt="BetMGM"
+        <img src="https://scmedia.wheeloffortunecasino.com/$-$/0562de9d17fb436cbad1a27a4b3942be.svg" alt="WheelofFortune"
           class="brand-logo" id="brandLogo-wof">
       </div>
       <div class="wof-button-container">
         <a class="button button-secondary-wof">LOG IN</a>
         <a class="button button-primary-wof" id="btnColorWOF">SIGN UP</a>
-        <div class="hamburger" onclick="toggleMenu()">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
       </div>
     </div>
 
     <div class="header-pc">
       <div class="header-logo">
-        <img src="https://scmedia.itsfogo.com/$-$/dfc83d8300fb4c0f9302c4e52c31d0fd.png" alt="BetMGM" class="brand-logo"
+        <img src="https://scmedia.itsfogo.com/$-$/dfc83d8300fb4c0f9302c4e52c31d0fd.png" alt="PartyCasino" class="brand-logo"
           id="brandLogo-pc">
       </div>
       <div class="pc-button-container">
         <a class="button button-secondary-pc">LOG IN</a>
         <a class="button button-primary-pc" id="btnColorPC">SIGN UP</a>
-        <div class="hamburger" onclick="toggleMenu()">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+      </div>
+    </div>
+
+    <div class="header-pp">
+      <div class="header-logo">
+        <img src="https://scmedia.nj.partypoker.com/$-$/5222a96d1c3342bbac83a32cd442444c.svg" alt="PartyPoker" class="brand-logo"
+          id="brandLogo-pp">
+      </div>
+      <div class="pp-button-container">
+        <a class="button button-secondary-pp">LOG IN</a>
+        <a class="button button-primary-pp" id="btnColorPP">SIGN UP</a>
       </div>
     </div>
   </div>
 
+  <!-- Landing Page Content -->
+
+  <!-- Navigation Landing Page -->
   <div id="preview" class="preview-container preview-desktop">
     <div id="hero" class="hero-image left">
       <img id="heroImg" src="" alt="">
@@ -86,6 +190,18 @@
       <button class="button button-primary-borgata buttonHero">SIGN UP</button>
       <button class="button button-primary-wof buttonHero">SIGN UP</button>
       <button class="button button-primary-pc buttonHero">SIGN UP</button>
+      <button class="button button-primary-pp buttonHero">SIGN UP</button>
+    </div>
+  </div>
+
+  <div id="imgAdjust" class="image-adjust">
+    <div class="adjustWidth">
+      <label for="adjust" class="dimension-adjust">Width</label>
+      <input type="text" id="currentWidth" name="adjust-width" />
+    </div>
+    <div class="adjustHeight">
+      <label for="adjust" class="dimension-adjust">Height</label>
+      <input type="text" id="currentHeight" name="adjust-height" />
     </div>
   </div>
 
@@ -97,6 +213,7 @@
     </div>
   </div>
 
+  <!-- Body Landing Page -->
   <div class="bottom-container">
     <section class="steps">
       <div class="one-wrapper">
@@ -125,7 +242,6 @@
         </div>
       </div>
     </section>
-
     <section class="tyc">
       <div class="one-wrapper">
         <div class="tyc-container">
@@ -214,9 +330,10 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="lp-footer">
       <div class="one-wrapper">
-        <!-- INTERNAL -->
+
         <div class="internal-content">
           <div class="l-flex__item l-flex--column">
             <h4 class="lp-footer__links-category">Lorem</h4>
@@ -248,8 +365,6 @@
               <li class="list-inline-item">
                 <a>Lorem</a>
               </li>
-
-
             </ul>
           </div>
           <div class="l-flex__item l-flex--column">
@@ -313,32 +428,24 @@
             </ul>
           </div>
         </div>
-        <!-- LICENSE -->
+        <!-- Footer -->
         <div class="footer-container">
-
-          <!-- COOKIE POLICY -->
           <p class="footer-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
             qui officia deserunt mollit anim id est laborum.</p>
-          <!-- LICENSE -->
           <p class="footer-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
             qui officia deserunt mollit anim id est laborum.</p>
-
           <!-- LOGOS -->
           <div class="license-logos">
-
             <a><img alt="rg-mgm" loading="lazy"
                 src="https://scmedia.itsfogo.com/$-$/f6491e793e2b4af99b255ba7e7f6315b.png?h=55&amp;w=55"></a>
-
             <a><img alt="nj-dge" src="https://scmedia.nj.betmgm.com/$-$/0bf3a90ddbb54d0593bff4dd12b286a5.png?h=55"></a>
-
             <p class="footer-message">Lorem ipsum dolor sit.</p>
-
           </div>
           <!---- ACCESSIBILITY --->
           <span class="footer-message"><strong>Lorem Ipsum</strong></span>
@@ -359,125 +466,8 @@
             <img  class="footer-social-logo twitter" src="https://www.svgrepo.com/show/508977/twitter-3.svg" alt="theme-twitter" loading="lazy">
            </a>
            </div>
-
-                 <!-- <div class="social-content">
-      <a>
-      <img class="footer-social-logo fb" style="height: auto;" alt="theme-fb" loading="lazy" src="https://scmedia.nj.betmgm.com/$-$/13b02620106f4c2095b453608402f549.png">
-      </a>
-      <a>
-      <img class="footer-social-logo ig" style="height: auto;" alt="theme-ig" loading="lazy" src="https://scmedia.nj.betmgm.com/$-$/e244be9983c54921a8151d3aa31d2e16.png">
-      </a>
-      <a>
-      <img class="footer-social-logo twitter" style="height: auto;" alt="theme-tw" loading="lazy" src="https://www.svgrepo.com/show/508977/twitter-3.svg">
-      </a>
-      </div> -->
-          <!-- <div class="social-content">
-            <a>
-              <img class="footer-social-logo fb" style="height: auto;" alt="theme-fb" loading="lazy"
-                src="./LP Tester Tool latest version/Assets/facebook-svgrepo-com.svg">
-            </a>
-            <a>
-              <img class="footer-social-logo ig" style="height: auto;" alt="theme-ig" loading="lazy"
-                src="./LP Tester Tool latest version/Assets/instagram-svgrepo-com.svg">
-            </a>
-            <a>
-              <img class="footer-social-logo twitter" style="height: auto; " alt="theme-tw" loading="lazy"
-                src="./LP Tester Tool latest version/Assets/twitter-154-svgrepo-com.svg">
-            </a>
-          </div> -->
         </div>
       </div>
-  </div>
-  <div class="menu-content" id="menu">
-    <div class="pop-up-container">
-      <div class="controls">
-        <div class="select-brand">
-          <div class="label">Select Brand</div>
-          <div class="icons">
-            <div class="betmgm-icon" data-brand="betmgm"><img src="./Assets/betmgm.svg"></div>
-            <div class="borgata-icon" data-brand="borgata"><img src="./Assets/borgata.svg"></div>
-            <div class="wof-icon" data-brand="wof"><img src="./Assets/wof.svg"></div>
-            <div class="pc-icon" data-brand="pc"><img src="./Assets/pc.svg"></div>
-          </div>
-        </div>
-
-        <div class="state-selector" style="margin-top: 1rem;">
-          <div class="label">Select State</div>
-          <select id="stateSelect" style="color: black;"></select>
-        </div>
-
-        <div class="product-type-selector">
-          <div class="label">Select Product</div>
-          <select id="productType" style="color: black;">
-            <option value="casino">Casino</option>
-            <option value="poker">Poker</option>
-            <option value="sports">Sports</option>
-          </select>
-
-          <div class="finalize-container">
-            <button id="submitBtnState" class="finalize" style="color: #FFF;">Save</button>
-          </div>
-        </div>
-
-
-
-
-        <div class="upload-container">
-          <div class="label">
-            Upload Assets
-          </div>
-          <label style="margin-bottom: 1rem;">
-            Hero Position
-            <select id="heroPosition" style="color: black;">
-              <option value="left">Left</option>
-              <option value="center">Center</option>
-              <option value="right">Right</option>
-            </select>
-          </label>
-          <div class="hero-position-container">
-
-          </div>
-          <label>
-            Desktop Background
-          </label>
-          <div class="file-upload-wrapper">
-            <input type="file" id="bgUpload" accept="image/*">
-          </div>
-          <label>
-            Mobile Background
-          </label>
-          <input type="file" id="mobileUpload" accept="image/*">
-          <label>
-            Hero PNG
-          </label>
-          <input type="file" id="heroUpload" accept="image/png">
-          <button onclick="resetView()">Reset</button>
-        </div>
-
-        <div class="mobile-view">
-          <div class="switch-box">
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider round"></span>
-            </label>
-            <label class="mobile-label">Mobile View</label>
-          </div>
-
-          <div id="imgAdjust" class="image-adjust">
-            <div class="adjustWidth">
-              <label for="adjust" class="dimension-adjust">Width</label>
-              <input type="text" id="currentWidth" name="adjust-width" />
-            </div>
-
-            <div class="adjustHeight">
-              <label for="adjust" class="dimension-adjust">Height</label>
-              <input type="text" id="currentHeight" name="adjust-height" />
-            </div>
-          </div>
-          <button class="finalize">Save</button>
-        </div>
-      </div>
-    </div>
   </div>
   </div>
 
@@ -486,22 +476,13 @@
     const previewMobile = document.getElementById('preview-mobile');
     const heroDiv = document.getElementById('hero');
     const heroImg = document.getElementById('heroImg');
-    const mobileUpload = document.getElementById('mobileImg'); // Where the mobile image will be shown
+    const mobileUpload = document.getElementById('mobileImg');
     const bgUpload = document.getElementById('bgUpload');
-    const mobileUpload2 = document.getElementById('mobileUpload'); // The upload button for mobile image
+    const mobileUpload2 = document.getElementById('mobileUpload');
     const heroUpload = document.getElementById('heroUpload');
-    const currentWidth = document.getElementById("currentWidth");
-    const currentHeight = document.getElementById("currentHeight");
     const previewInnerBox = document.querySelector('.preview-mobile_inner-box');
-    const finalizeButton = document.querySelector('.finalize'); // Save Button
     const heroPosition = document.getElementById("heroPosition");
-    const checkBox = document.querySelector(".switch input");
-    const headerMobile = document.querySelector(".header-mobile");
-    const headerBetMGM = document.querySelector(".header-betmgm");
-    const headerBorgata = document.querySelector(".header-borgata");
-    const headerWOF = document.querySelector(".header-wof");
-    const headerPC = document.querySelector(".header-pc");
-    const buttonBorgata = document.querySelector(".button-primary-borgata");
+    const checkBox = document.getElementById("checkBox");
 
     let imageUploaded = false;
 
@@ -519,50 +500,11 @@
     });
 
     // Mobile Upload - Image uploaded on Mobile only shows on Mobile
-
     mobileUpload2.addEventListener('change', function (e) {
       const file = e.target.files[0];
       if (file) {
         const url = URL.createObjectURL(file);
         previewMobile.style.backgroundImage = `url('${url}')`;
-
-        // Upon upload, allows DOM to "read" image data thus allowing us to extract its width and height values and display it on the input text tag.
-        const img = new Image();
-        img.src = url;
-        img.onload = function () {
-          currentWidth.value = `${img.width}`;
-          currentHeight.value = `${img.height}`;
-        };
-      }
-    });
-
-    // Function to apply changes - Allows us to modify the value in the input text tag of width and height
-    function applyChanges() {
-      const newHeight = currentHeight.value.trim();
-      const newWidth = currentWidth.value.trim();
-
-      if (newHeight && !isNaN(newHeight)) {
-        previewInnerBox.style.height = `${newHeight}px`;
-      }
-
-      if (newWidth && !isNaN(newWidth)) {
-        previewInnerBox.style.width = `${newWidth}px`;
-      }
-    }
-
-    // Makes Save button functional - Applies the new width and height we place
-    finalizeButton.addEventListener('click', applyChanges);
-
-    // Apply changes when Enter is pressed in the input fields
-    currentWidth.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
-        applyChanges();
-      }
-    });
-
-    currentHeight.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
-        applyChanges();
       }
     });
 
@@ -574,39 +516,19 @@
       }
     });
 
-    function updateHeroButtonsVisibility() {
-      const heroImg = document.getElementById('heroImg');
-      const buttons = document.querySelectorAll('.buttonHero');
-
-      if (!heroImg.src || heroImg.src.endsWith('/')) {
-        buttons.forEach(btn => {
-          btn.style.display = 'none';
-        });
-      } else {
-        buttons.forEach(btn => {
-          btn.style.display = 'none';
-        });
-      }
-    }
-
     function resetView() {
-      heroImg.src = "";
-      updateHeroButtonsVisibility();
-      preview.style.backgroundImage = "";
-      previewMobile.style.backgroundImage = "";
-      heroImg.src = "";
-      bgUpload.value = "";
-      mobileUpload2.value = "";
-      heroUpload.value = "";
-      currentHeight.value = "";
-      currentWidth.value = "";
-      heroPosition.value = "left";
-
-      imgAdjust.style.opacity = "0";
-      finalizeButton.style.opacity = "0";
+      heroImg.src = '';
+      heroDiv.value = '';
+      preview.style.backgroundImage = '';
+      previewMobile.style.backgroundImage = '';
+      bgUpload.value = '';
+      mobileUpload.value = '';
+      mobileUpload2.value = '';
+      heroUpload.value = '';
+      previewInnerBox.value = '';
 
       document.querySelectorAll('.buttonHero').forEach(btn => {
-        btn.style.display = "none";
+        btn.style.display = 'none';
       });
     }
 
@@ -614,17 +536,16 @@
     previewMobile.style.backgroundImage = '';
     heroImg.src = '';
     bgUpload.value = '';
+    mobileUpload.value = '';
     mobileUpload2.value = '';
     heroUpload.value = '';
-    currentHeight.value = "";
-    currentWidth.value = "";
-    heroPosition.value = "left";
 
     const headers = {
       'betmgm': document.querySelector('.header-betmgm'),
       'borgata': document.querySelector('.header-borgata'),
       'wof': document.querySelector('.header-wof'),
       'pc': document.querySelector('.header-pc'),
+      'pp': document.querySelector('.header-pp'),
     };
 
     const icons = {
@@ -632,27 +553,30 @@
       'borgata': document.querySelector('.borgata-icon'),
       'wof': document.querySelector('.wof-icon'),
       'pc': document.querySelector('.pc-icon'),
+      'pp': document.querySelector('.pp-icon'),
     };
 
-    const controls = document.querySelector('.controls');
+    const controls = document.querySelector('.setting-container');
     const uploadContainer = document.querySelector('.upload-container');
     const stateSelector = document.querySelector('.state-selector');
-    const productTypeSelector = document.querySelector('.product-type-selector');
-    const finalizeContainer = document.querySelector('.finalize-container');
+    const productTypeSelector = document.querySelector('.productType');
     const mobileviewContainer = document.querySelector('.mobile-view');
+    const settingContainer = document.querySelector('.setting-container');
 
     const headerBackgrounds = {
       'betmgm': '#121212',
       'borgata': '#292a2e',
       'wof': '#121212',
       'pc': '#211551',
+      'pp': '#0f0f10',
     };
 
     const buttons = {
       'betmgm': document.querySelector(".preview-desktop .button-primary-betmgm"),
       'borgata': document.querySelector(".preview-desktop .button-primary-borgata"),
       'wof': document.querySelector(".preview-desktop .button-primary-wof"),
-      'pc': document.querySelector(".preview-desktop .button-primary-pc")
+      'pc': document.querySelector(".preview-desktop .button-primary-pc"),
+      'pp': document.querySelector(".preview-desktop .button-primary-pp"),
     };
 
     // 🖌️ Function to apply background color to all relevant containers
@@ -662,9 +586,10 @@
       controls.style.backgroundColor = bgColor;
       uploadContainer.style.backgroundColor = bgColor;
       stateSelector.style.backgroundColor = bgColor;
-      productTypeSelector.style.backgroundColor = bgColor;
-      finalizeContainer.style.backgroundColor = bgColor;
+      // productTypeSelector.style.backgroundColor = bgColor;
+      // finalizeContainer.style.backgroundColor = bgColor;
       mobileviewContainer.style.backgroundColor = bgColor;
+      settingContainer.style.backgroundColor = bgColor;
     }
 
     // 👁️ Function to show the correct header
@@ -677,21 +602,28 @@
     }
 
 
-    // Add event listeners to each icon
-    Object.keys(icons).forEach(brand => {
-      icons[brand].addEventListener('click', () => {
-        showHeader(brand);
-      });
+    // // Add event listeners to each icon
+    // Object.keys(icons).forEach(brand => {
+    //   icons[brand].addEventListener('click', () => {
+    //     showHeader(brand);
+    //   });
+    // });
+
+    // Add event listener for dropdown change
+    const brandSelect = document.getElementById("brand-select");
+
+    brandSelect.addEventListener("change", (e) => {
+      const selectedBrand = e.target.value;
+      showHeader(selectedBrand);
     });
 
     // ✅ Set default brand on page load
     document.addEventListener('DOMContentLoaded', () => {
       const defaultBrand = 'betmgm';
       showHeader(defaultBrand);
+      brandSelect.value = defaultBrand;
     });
-
     document.addEventListener("DOMContentLoaded", function () {
-
       const desktopPreview = document.querySelector(".preview-desktop");
       const mobilePreview = document.querySelector(".preview-mobile");
       const headerMobile = document.querySelector(".header-mobile");
@@ -699,6 +631,7 @@
       const headerBorgata = document.querySelector(".header-borgata");
       const headerWOF = document.querySelector(".header-wof");
       const headerPC = document.querySelector(".header-pc");
+      const headerPP = document.querySelector(".header-pp");
       const headerBorgataIMG = document.querySelector(".header-wof img");
       const buttonBorgata = document.querySelector(".preview-desktop .button-primary-borgata");
       const stepsList = document.querySelector(".steps-list");
@@ -709,8 +642,6 @@
       const tycContainer = document.querySelector(".tyc-container");
       const internalContent = document.querySelector(".internal-content");
       const footerContainer = document.querySelector(".footer-container");
-
-
 
       let attempts = 0;
       const maxAttempts = 2;
@@ -733,18 +664,18 @@
         }
       }, 1000);
 
-      function hideButtonsIfNeeded() {
-        const src = heroImg.getAttribute("src");
-        const isEmpty = !src || src.trim() === "" || src.includes("about:blank");
-        const isChecked = checkBox.checked;
+      // function hideButtonsIfNeeded() {
+      //   const src = heroImg.getAttribute("src");
+      //   const isEmpty = !src || src.trim() === "" || src.includes("about:blank");
+      //   const isChecked = checkBox.checked;
 
-        if (isEmpty || !isChecked) {
-          document.querySelectorAll('.buttonHero').forEach(btn => {
-            btn.style.display = "none";
-            console.log("delayed double-check");
-          });
-        }
-      }
+      //   if (isEmpty || !isChecked) {
+      //     document.querySelectorAll('.buttonHero').forEach(btn => {
+      //       btn.style.display = "none";
+      //       console.log("delayed double-check");
+      //     });
+      //   }
+      // }
 
       function runHideButtonsSequence({ delay = 5, debounceTime = 5 } = {}) {
         let debounceTimer;
@@ -758,6 +689,7 @@
         }, debounceTime);
       }
 
+      // START OF CODE FOR HIDING CTA BUTTON 
 
       checkBox.addEventListener("change", function () {
         if (this.checked) {
@@ -769,13 +701,16 @@
           headerBorgata.style.width = "604px";
           headerWOF.style.width = "604px";
           headerPC.style.width = "604px";
+          headerPP.style.width = "604px";
           headerBorgataIMG.style.height = "20px";
           headerBorgataIMG.style.padding = "15px";
           stepsList.style.flexDirection = "column";
           oneWrapper.style.width = "600px";
           stepsItems.forEach(item => item.classList.add("steps-item-mobile"));
           bottomContainer.style.width = "600px";
-          bottomContainer.style.marginLeft = "34.3%";
+          bottomContainer.style.left = "50%";
+          bottomContainer.style.position = "relative";
+          bottomContainer.style.transform = "translateX(-50%)";
           tycContainer.classList.add("tyc-container-mobile");
           internalContent.classList.add("internal-content-mobile");
           footerContainer.classList.add("footer-container-mobile");
@@ -788,6 +723,7 @@
           headerBorgata.style.width = "";
           headerWOF.style.width = "";
           headerPC.style.width = "";
+          headerPP.style.width = "";
           headerBorgataIMG.style.height = "30px";
           headerBorgataIMG.style.padding = "10px";
           stepsList.style.flexDirection = "row";
@@ -813,9 +749,6 @@
         runHideButtonsSequence(); // 🔥 Replaces manual double call
         applyProductColor();      // 🔄 Always reapply color logic
       });
-
-
-
 
       // BUTTONS under HERO IMAGE
 
@@ -851,12 +784,31 @@
       });
     });
 
-    // Burger Menu
+    function checkHeroAndResetIfNeeded() {
+    const src = heroImg.getAttribute("src");
+    const isEmpty = !src || src.trim() === "" || src.includes("about:blank");
 
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('show');
+    if (isEmpty) {
+        console.log("Hero image is empty. Running resetView() twice.");
+        resetView();
+        setTimeout(resetView, 100); // slight delay to ensure second call is processed
+      }
     }
+
+    // Monitor checkbox changes
+    checkBox.addEventListener("change", () => {
+      setTimeout(checkHeroAndResetIfNeeded, 100); // delay to allow DOM updates
+    });
+
+    // Monitor header visibility changes
+    Object.values(headers).forEach(header => {
+      const observer = new MutationObserver(() => {
+        setTimeout(checkHeroAndResetIfNeeded, 100);
+      });
+      observer.observe(header, { attributes: true, attributeFilter: ['style'] });
+    });
+
+    // END OF CODE FOR HIDING CTA BUTTON 
 
     // ===== Element Selectors =====
     const stateSelect = document.getElementById('stateSelect');
@@ -878,21 +830,22 @@
       betmgm: ['NJ', 'PA', 'WV', 'MI', 'ON'],
       borgata: ['NJ', 'PA'],
       wof: ['NJ', 'ON'],
-      pc: ['NJ']
+      pc: ['NJ'],
+      pp: ['NJ']
     };
 
     // ===== Brand Logos by State =====
     const brandLogos = {
       betmgm: {
-        NJ: 'https://scmedia.nj.betmgm.com/$-$/1bc98331c0cf42498a92cf74129978ab.svg',
+        NJ: './Assets/mcnj.svg',
         PA: 'https://scmedia.itsfogo.com/$-$/43443280626141e0b569cddead5508ba.svg',
-        WV: 'https://scmedia.wv.betmgm.com/$-$/c479aa437032433382b5d880d0969402.svg',
+        WV: './Assets/mcwv.svg',
         MI: 'https://scmedia.itsfogo.com/$-$/57f303deabd64a6ea7dfbcf6e60683fd.svg',
-        ON: 'https://scmedia.dc.betmgm.com/$-$/6e45ae90f456464bb5b1fb63770296bc.png'
+        ON: './Assets/mcon.svg'
       },
       borgata: {
         NJ: 'https://scmedia.itsfogo.com/$-$/8aa87cace9824f0e895d41fa8accbc35.svg',
-        PA: 'https://scmedia.itsfogo.com/$-$/40d6905a04ca49f29649140865f543e2.svg',
+        PA: 'https://scmedia.pa.borgataonline.com/$-$/44523f8464744e3d94635ac05230e826.svg',
 
       },
       wof: {
@@ -901,6 +854,9 @@
       },
       pc: {
         NJ: 'https://scmedia.itsfogo.com/$-$/dfc83d8300fb4c0f9302c4e52c31d0fd.png',
+      },
+      pp: {
+        NJ: './Assets/pp.svg',
       }
     };
 
@@ -927,6 +883,9 @@
       },
       pc: {
         casino: '#f00a47'
+      },
+      pp: {
+        casino: '#e8490c'
       }
     };
 
@@ -1018,12 +977,14 @@
       let filteredProducts = allProducts;
 
       // Party Casino or Wheel of Fortune: only show Casino
-      if (currentBrand === 'pc' || currentBrand === 'wof') {
+      if (currentBrand === 'pc' || currentBrand === 'wof' ) {
         filteredProducts = allProducts.filter(p => p.value === 'casino');
       }
       // WV: remove Poker (unless already restricted above)
       else if (selectedState === 'WV') {
         filteredProducts = allProducts.filter(p => p.value !== 'poker');
+      }else if (currentBrand === 'pp' ) {
+        filteredProducts = allProducts.filter(p => p.value === 'poker');
       }
 
       // Populate product select dropdown
@@ -1041,7 +1002,46 @@
       applyProductColor();  // <-- add this line
     }
 
+    productSelect.addEventListener('change', () => {
+      filterStatesBasedOnProduct();
+      applyProductColor(); // Optional: keep consistent
+    });
 
+    function filterStatesBasedOnProduct() {
+      const selectedProduct = productSelect.value;
+      let allowedStates = brandStates[currentBrand] || [];
+
+      // If Poker is selected, remove WV
+      if (selectedProduct === 'poker') {
+        allowedStates = allowedStates.filter(state => state !== 'WV');
+      }
+
+      const currentState = stateSelect.value;
+      const stateNames = {
+        NJ: 'New Jersey',
+        PA: 'Pennsylvania',
+        WV: 'West Virginia',
+        MI: 'Michigan',
+        ON: 'Ontario'
+      };
+
+      // Rebuild the dropdown
+      stateSelect.innerHTML = '';
+      allowedStates.forEach(stateCode => {
+        const option = document.createElement('option');
+        option.value = stateCode;
+        option.textContent = stateNames[stateCode] || stateCode;
+        stateSelect.appendChild(option);
+      });
+
+      // If the previously selected state is still valid, keep it
+      if (allowedStates.includes(currentState)) {
+        stateSelect.value = currentState;
+      } else {
+        // Otherwise default to the first available option
+        stateSelect.selectedIndex = 0;
+      }
+    }
 
 
     // Function to update state options dynamically based on brand
@@ -1052,11 +1052,11 @@
         const option = document.createElement('option');
         option.value = stateCode;
         const stateNames = {
-          NJ: 'New Jersey (NJ)',
-          PA: 'Pennsylvania (PA)',
-          WV: 'West Virginia (WV)',
-          MI: 'Michigan (MI)',
-          ON: 'Ontario (ON)'
+          NJ: 'New Jersey',
+          PA: 'Pennsylvania',
+          WV: 'West Virginia',
+          MI: 'Michigan',
+          ON: 'Ontario'
         };
         option.textContent = stateNames[stateCode] || stateCode;
         stateSelect.appendChild(option);
@@ -1069,13 +1069,14 @@
 
     // ===== Event: Brand Selection =====
     // Make sure your brand icon divs have data-brand attributes like <div data-brand="borgata" ...>
-    brandIcons.forEach(icon => {
-      icon.addEventListener('click', () => {
-        currentBrand = icon.dataset.brand;
-        updateStateOptions();
-        updateProductOptions();
-        updateLogo();
-      });
+    // const brandSelect = document.getElementById('brand-select');
+
+    // ===== Event: Brand Selection =====
+    brandSelect.addEventListener('change', () => {
+      currentBrand = brandSelect.value;
+      updateStateOptions();
+      updateProductOptions();
+      updateLogo();
     });
 
     stateSelect.addEventListener('change', () => {
@@ -1108,6 +1109,7 @@
 
     // ===== Initialize on page load =====
     document.addEventListener('DOMContentLoaded', () => {
+      currentBrand = brandSelect.value; // ensure consistency with default dropdown value
       updateStateOptions();
       updateProductOptions();
       updateLogo();
@@ -1115,6 +1117,18 @@
 
 
   </script>
+  <script>
+    function adjustHeroImage() {
+      const widthInput = document.getElementById('heroWidth');
+      const heroImg = document.querySelector('.hero-image img');
+
+      if (heroImg) {
+        const width = widthInput.value;
+        heroImg.style.width = width + '%';
+      }
+    }
+  </script>
+  
 </body>
 
 </html>

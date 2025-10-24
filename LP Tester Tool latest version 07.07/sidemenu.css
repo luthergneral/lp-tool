@@ -10,48 +10,195 @@
 } */
 
 
-
-.hamburger {
-    display: inline-block;
-    cursor: pointer;
-    z-index: 100;
-    float: right;
-    padding: 0 0 0 15px;
-    
+.setting-container {
+    height: 230px;
+    background: rgb(92, 92, 92);
+    padding: .7vh 0;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: .8rem;
+    padding: 0 5px;
+    width: 100%;
+    border-bottom: 1px solid white;
 }
 
-.hamburger div {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 5px 0;
-    transition: 0.4s;
-}
+/* .brand-container {
+    display: flex;
+    flex-direction: row;
+} */
 
-.menu-content {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 50px;
-    left: 92.8%;
-    transform: translateX(-50%);
-    /* width: 90%; */
-    padding: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
-    /* justify-content: center; */
-    height: 74.5vh;
-}
-
-.menu-content.show {
-    display: flex; /* Show when toggled */
-}
-
-.state-selector,
-.product-type-selector,
-.switch-box {
+.reset-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px #ffffff63;
+    width: 35%;
+    height: 80%;
+    margin-top: 20px;
+}
+
+.dropdown-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mobile-view-container {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+
+select, input[type="file"] {
+    padding: 5px;
+    color: #FFF;
+    padding-left: 10px;
+    width: 130px;
+    border-radius: 10px;
+}
+
+#heroPosition {
+    margin-top: 5px;
+}
+
+.dropdown-container .label {
+    font-size: 16px;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.dropdown-bottom .label {
+    margin-bottom: 10px;
+}
+
+.upload-container .label {
+    font-size: 16px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.adjustment-container .label {
+    font-size: 16px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.mobile-view-container .label {
+    font-size: 16px;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px #ffffff63;
+    width: 35%;
+    height: 80%;
+    margin-top: 20px;
+}
+
+.upload-bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.acq-desktop, .acq-mobile, .acq-mobile-w {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.acq-desktop label, .acq-mobile label, .acq-mobile-w label {
+    font-size: 11px;
+}
+
+.file-upload-d, .file-upload-m, .file-upload-png {
+    border: dashed 1px #fff;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.switch-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.hero-size-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-size-controls input {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 5px;
+    margin-top: 5px;
+    color: #000;
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 60px;
+}
+
+.img-position-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-position-container input {
+    margin-bottom: 1rem;
+    padding: 5px;
+    margin-top: 5px;
+    color: #000;
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 60px;
+}
+
+.adjustment-container label {
+    font-size: 12px;
+}
+
+.adjustment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: solid 1px #ffffff63;
+    width: 30%;
+    height: 80%;
+    margin-top: 20px;
+}
+
+.adjustment-bottom {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.reset-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 

@@ -35,16 +35,24 @@
     justify-content: space-between;
 }
 
-.header-betmgm img, .header-borgata img, .header-wof img, .header-pc img {
+.header-pp {
+    background-color: #0f0f10;
+    height: 50px;
+    display: flex;
+    display: none;
+    justify-content: space-between;
+}
+
+.header-betmgm img, .header-borgata img, .header-wof img, .header-pc img, .header-pp img {
     height: 30px;
     padding: 10px;
 }
 
-.betmgm-icon, .borgata-icon, .wof-icon, .pc-icon {
+.betmgm-icon, .borgata-icon, .wof-icon, .pc-icon, .pp-icon {
     cursor: pointer;
 }
 
-.betmgm-button-container, .borgata-button-container, .wof-button-container, .pc-button-container {
+.betmgm-button-container, .borgata-button-container, .wof-button-container, .pc-button-container, .pp-button-container {
     padding: 6px;
 }
 
@@ -88,6 +96,17 @@
 }
 
 .button-secondary-pc {
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+.button-primary-pp {
+    background: #e8490c;
+    color: #fff;
+    border: 1px solid #e8490c;
+}
+
+.button-secondary-pp {
     color: #fff;
     border: solid 1px #fff;
 }
